@@ -1,0 +1,130 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>APITutorial</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+ -->
+
+<web-app
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	
+	<filter>
+	    <filter-name>CorsFilter</filter-name>
+	    <filter-class>CORSFilter</filter-class>
+	</filter>
+	 
+	<filter-mapping>
+	    <filter-name>CorsFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>PersonServlet</servlet-name>
+		<servlet-class>PersonServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PersonServlet</servlet-name>
+		<url-pattern>/people/*</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+		<servlet-name>MedicineAPIServlet</servlet-name>
+		<servlet-class>MedicineAPIServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MedicineAPIServlet</servlet-name>
+		<url-pattern>/medicine/all</url-pattern>
+	</servlet-mapping>
+<servlet>
+		<servlet-name>abc</servlet-name>
+		<servlet-class>CompanyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>
+		<url-pattern>/medicine/company</url-pattern>
+	</servlet-mapping>
+<servlet>
+		<servlet-name>API</servlet-name>
+		<servlet-class>Parameter</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>API</servlet-name>
+		<url-pattern>/medicine/medicinename</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Filter</servlet-name>
+		<servlet-class>CompositionAPI</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Filter</servlet-name>
+		<url-pattern>/medicine/by</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Doctor</servlet-name>
+		<servlet-class>DoctorsAPI</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Doctor</servlet-name>
+		<url-pattern>/doctors/all</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DoctorType</servlet-name>
+		<servlet-class>DoctorParameterAPI</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DoctorType</servlet-name>
+		<url-pattern>/doctors/by</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>User</servlet-name>
+		<servlet-class>UserAPI</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>User</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UserProb</servlet-name>
+		<servlet-class>UserProblemAPI</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UserProb</servlet-name>
+		<url-pattern>/problem</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Prescription</servlet-name>
+		<servlet-class>PrescriptionAPI</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Prescription</servlet-name>
+		<url-pattern>/prescription</url-pattern>
+	</servlet-mapping>
+
+</web-app>
